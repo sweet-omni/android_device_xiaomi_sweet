@@ -34,6 +34,9 @@
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
+namespace android {
+namespace init {
+
 using android::base::GetProperty;
 
 std::vector<std::string> ro_props_default_source_order = {
@@ -144,3 +147,5 @@ void vendor_load_properties() {
     }
     load_dalvik_properties();
 }
+} // init
+} // android
