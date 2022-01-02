@@ -133,7 +133,9 @@ TARGET_SCREEN_DENSITY := 440
 
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+include vendor/omni/sepolicy/sepolicy.mk
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 # Treble
 BOARD_VNDK_VERSION := current
