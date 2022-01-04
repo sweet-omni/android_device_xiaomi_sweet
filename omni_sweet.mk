@@ -10,6 +10,7 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 # Inherit from sweet device
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
+TARGET_BOOTANIMATION_SIZE := 1080p
 # Inherit common.
 $(call inherit-product, vendor/omni/config/common.mk)
 
