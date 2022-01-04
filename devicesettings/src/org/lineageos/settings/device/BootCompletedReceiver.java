@@ -19,10 +19,12 @@ package org.lineageos.settings.device;
 import android.provider.Settings;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
+import android.database.ContentObserver;
 import android.os.Handler;
 
 import androidx.preference.PreferenceManager;
@@ -30,6 +32,8 @@ import androidx.preference.PreferenceManager;
 import org.lineageos.settings.device.Constants;
 import org.lineageos.settings.device.dirac.DiracUtils;
 import org.lineageos.settings.device.utils.DisplayUtils;
+
+import vendor.xiaomi.hardware.touchfeature.V1_0.ITouchFeature;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -40,5 +44,26 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DisplayUtils.setDcDimmingStatus(sharedPreferences.getBoolean(Constants.KEY_DC_DIMMING, false));
         DisplayUtils.updateRefreshRateSettings(context);
         DiracUtils.initialize(context);
+
+        ContentObserver observer = new ContentObserver(Handler.getMain()) {
+            @Override
+            public void onChange(boolean selfChange) {
+                updateTapToWakeStatus(context);
+            }
+        };
+
+        context.getContentResolver().registerContentObserver(
+            Settings.Secure.getUriFor(Settings.Secure.DOUBLE_TAP_TO_WAKE), true, observer);
+
+        updateTapToWakeStatus(context);
+    }
+    private void updateTapToWakeStatus(Context context) {
+       try {
+            ITouchFeature.getService().setTouchMode(Constants.DT2W_TOUCH_FEATURE,
+                    (Settings.Secure.getInt(context.getContentResolver(),
+                            Settings.Secure.DOUBLE_TAP_TO_WAKE, 0) == 1) ? 1 : 0);
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
     }
 }
