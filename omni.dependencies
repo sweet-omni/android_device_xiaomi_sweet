@@ -10,11 +10,5 @@
     "repository": "android_device_qcom_caf-sepolicy",
     "target_path": "device/qcom/sepolicy",
     "revision": "android-12.0"
-  },
-   {
-     "remote": "gitlab",
-     "repository": "proprietary_vendor_xiaomi_sweet",
-     "target_path": "vendor/xiaomi/sweet",
-     "revision": "android-12.0"
-   }
+  }
 ]
