@@ -14,6 +14,10 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 # Inherit common.
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/omni/overlay/CarrierConfig
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := omni_sweet
 PRODUCT_DEVICE := sweet
