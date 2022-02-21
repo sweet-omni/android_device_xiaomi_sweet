@@ -1,13 +1,10 @@
-# All unpinned blobs are extracted from Redmi/sweet_eea/sweet:11/RKQ1.200826.002/V12.5.2.0.RKFEUXM:user/release-keys
+# All unpinned blobs are extracted from Redmi/sweet_eea/sweet:11/RKQ1.200826.002/V13.0.3.0.SKFEUXM:user/release-keys
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
 # Camera
-system/lib/libcameraservice.so
-system_ext/lib/vendor.qti.hardware.camera.device@1.0.so
-system_ext/lib/vendor.qti.hardware.camera.device@2.0.so
-system_ext/lib/vendor.qti.hardware.camera.device@3.5.so
+system/lib64/libcameraservice.so
 
 # CNE
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar
@@ -122,13 +119,11 @@ system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
-system_ext/etc/permissions/telephonyservice.xml
 system_ext/framework/embmslibrary.jar
 system_ext/framework/qcrilhook.jar
 
@@ -140,4 +135,4 @@ vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/30/lib64/soundf
 #system_ext/framework/qti-telephony-common.jar
 
 # VINTF
-vendor/etc/vintf/manifest.xml:product/vendor_overlay/30/etc/vintf/manifest.xml|6451e8f5ca9fad2961c172ab514d4cf5885181ed
+vendor/etc/vintf/manifest.xml:product/vendor_overlay/30/etc/vintf/manifest.xml|b7c44891c3d4ec67e66682e013f577604be95c93
