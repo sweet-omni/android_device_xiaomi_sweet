@@ -78,6 +78,8 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/sweet
 KERNEL_LD := LD=ld.lld
 KERNEL_SUPPORTS_LLVM_TOOLS := true
 
+include device/xiaomi/sweet-kernel/BoardConfig.mk
+
 # Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/manifests/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifests/manifest.xml
