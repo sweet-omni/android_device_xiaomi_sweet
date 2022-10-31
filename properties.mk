@@ -370,6 +370,10 @@ persist.debug.wfd.enable=1 \
 PRODUCT_PROPERTY_OVERRIDES += \
 zygote.critical_window.minute=10
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.camera.privapp.list=org.lineageos.aperture,com.android.camera
+    vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
+
 ## system_ext ##
 
 # Updater
