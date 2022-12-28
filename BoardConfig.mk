@@ -73,12 +73,12 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := r450784d
 TARGET_KERNEL_CONFIG := vendor/sweet_user_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sweet
 KERNEL_LD := LD=ld.lld
 KERNEL_SUPPORTS_LLVM_TOOLS := true
-
-include device/xiaomi/sweet-kernel/BoardConfig.mk
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld"
 
 # Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/manifests/device_framework_matrix.xml
@@ -133,6 +133,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sm6150
+QCOM_HARDWARE_VARIANT := sm8150
+MSMSTEPPE := sm6150
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -149,7 +151,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 TARGET_SEPOLICY_DIR := msmsteppe
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include vendor/omni/sepolicy/sepolicy.mk
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2022-07-01
