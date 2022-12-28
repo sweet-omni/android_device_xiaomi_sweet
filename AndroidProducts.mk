@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/jarvis_sweet.mk
+    $(LOCAL_DIR)/omni_sweet.mk
