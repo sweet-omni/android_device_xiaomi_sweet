@@ -1,7 +1,7 @@
 [
   {
-    "remote": "github",
-    "repository": "JARVIS-ROM/android_kernel_xiaomi_sweet",
+    "remote": "gitlab",
+    "repository": "android_kernel_xiaomi_sweet",
     "target_path": "kernel/xiaomi/sweet",
     "revision": "android-13.0"
   },
