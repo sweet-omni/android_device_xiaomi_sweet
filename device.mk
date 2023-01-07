@@ -282,7 +282,9 @@ PRODUCT_PACKAGES += \
     SettingsResSweet \
     SystemUIResSweet \
     TelephonyResSweet \
-    WifiResSweet
+    WifiResSweet \
+    DialerResSweet \
+    Launcher3ResSweet
 
 # Power
 PRODUCT_PACKAGES += \

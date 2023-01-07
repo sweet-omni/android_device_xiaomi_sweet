@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 20122 OmniROM
+<!-- Copyright (C) 2022 OmniROM
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,8 +11,8 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.dialer.overlay.xiaomi_sweet">
+    package="com.android.launcher3.overlay.xiaomi_sweet">
     <application android:hasCode="false" />
     <overlay android:isStatic="true" android:priority="10"
-	android:targetPackage="com.android.dialer"/>
+	android:targetPackage="com.android.launcher3"/>
 </manifest>
