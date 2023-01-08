@@ -1,8 +1,9 @@
 {
-    "model": "Redmi Note 10 Pro",
-    "pageUrl":"https://dl.omnirom.org/sweet",
-    "make": "Redmi",
-    "image": "meta/device_image.png",
-    "state": "official",
-    "device": "sweet"
+   "model":"Redmi Note 10 Pro",
+   "pageUrl":"https://dl.omnirom.org/sweet",
+   "make":"Redmi",
+   "image":"meta/device_image.png",
+   "state":"official",
+   "device":"sweet",
+   "readme":"https://github.com/omnirom/android_device_xiaomi_sweet/blob/android-13.0/meta/installguide.md"
 }
