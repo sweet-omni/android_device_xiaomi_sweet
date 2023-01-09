@@ -1,0 +1,2 @@
+allow platform_app cache_recovery_file:dir { search rw_dir_perms add_name r_file_perms create_file_perms create_dir_perms };
+allow platform_app cache_recovery_file:file { create_file_perms r_file_perms };
