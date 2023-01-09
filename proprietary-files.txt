@@ -874,6 +874,19 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/hw/vulkan.adreno.so|3111afef634cdabcd20f2db66a9f5d7c7ae439ee
 vendor/lib64/hw/vulkan.adreno.so|b65f4b27bd946fc5950b7b6b039205ac877e5bfd
 
+# IPACM
+vendor/bin/ipacm
+vendor/bin/ipacm-diag
+vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/ipacm.rc
+vendor/etc/IPACM_cfg.xml
+vendor/lib64/liboffloadhal.so
+vendor/lib64/libipanat.so
+vendor/lib64/libnfnetlink.so
+vendor/lib64/libnetfilter_conntrack.so
+vendor/lib64/android.hardware.tetheroffload.config@1.0.so|2a17f89cf041521940b8bec0760ac9ddb3971a1d
+vendor/lib64/android.hardware.tetheroffload.control@1.0.so|7522d9ea5e3de88c7bf5e4d0300d1e6b7d006f14
+
 # IRQ balance
 vendor/bin/msm_irqbalance
 

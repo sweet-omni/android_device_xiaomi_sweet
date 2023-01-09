@@ -179,7 +179,7 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
 # IPACM
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
